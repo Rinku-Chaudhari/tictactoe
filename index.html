@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="tic-tac-toe.png" />
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="confirm_replay">
+      <p class="game_result_p"></p>
+      <button class="quit_game_btn">QUIT</button>
+    </section>
+
+    <section class="homepage">
+      <img src="tic-tac-toe.png" alt="icon" />
+
+      <div class="buttons">
+        <button class="host_btn">HOST GAME</button>
+        <button class="join_btn">JOIN GAME</button>
+      </div>
+    </section>
+
+    <section class="waiting_page">
+      <p>Waiting for the player to join....</p>
+    </section>
+
+    <section class="confirm_prompt">
+      <p class="alert_p"></p>
+      <button class="allow_btn">Let em join</button>
+      <button class="reject_btn">Fuck off</button>
+    </section>
+
+    <section class="join_page">
+      <form class="join_form" method="POST">
+        <input
+          type="text"
+          class="join_code_input"
+          placeholder="Enter Join Code here"
+        />
+        <input
+          type="text"
+          class="username_input"
+          placeholder="Enter your username here"
+        />
+        <input type="submit" value="Join" />
+        <p class="request_result_view"></p>
+      </form>
+    </section>
+
+    <section class="playing_mode">
+      <p class="turn_status"></p>
+      <p>X=You and O=opponent</p>
+      <table class="playing_table">
+        <tr>
+          <td index="1"></td>
+          <td index="2"></td>
+          <td index="3"></td>
+        </tr>
+
+        <tr>
+          <td index="4"></td>
+          <td index="5"></td>
+          <td index="6"></td>
+        </tr>
+
+        <tr>
+          <td index="7"></td>
+          <td index="8"></td>
+          <td index="9"></td>
+        </tr>
+      </table>
+    </section>
+  </body>
+
+  <script
+    src="https://tictactoe-server1.herokuapp.com/socket.io/socket.io.js"
+    defer
+  ></script>
+  <script src="script.js" defer></script>
+</html>
